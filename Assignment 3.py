@@ -102,7 +102,7 @@ def processHitsHourly(csvfile):
              hour_five += 1
          else:
              hour_six += 1
-      totalhit = 
+     totalhit = 
 int(hour_one)+int(hour_two)+int(hour_three)+int(hour_four)+int(hour_five)+int(hour_six)
     print '\n'
     print 'Hour 12 has {} hits'.format(hour_one)
