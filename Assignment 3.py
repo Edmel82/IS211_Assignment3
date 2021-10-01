@@ -13,13 +13,11 @@ parser = argparse.ArgumentParser(description='we use this to pass cvs url from c
 parser.add_argument('--url', action="store", dest="url", type=str)
 
 def getURL(url):
-
     request = urllib2.Request(url)
     response = urllib2.urlopen(request)
     return response.read()
     
 def processIMG(csvfile):
-
     reader = csv.reader(StringIO(csvfile))
     rowcount = 0
     imgcount = 0
@@ -48,7 +46,6 @@ def processIMG(csvfile):
     print 'Image request account for {}% of all requests. JPEG has {}% PNG has {}% & GIF has {}% hits.'.format(imgpercentage, jpegpercentage, pngpercentage, gifpercentage)
 
 def processBrowser(csvfile):
-
     reader = csv.reader(StringIO(csvfile))
     safaricount = 0
     chromecount = 0
@@ -77,9 +74,9 @@ def processBrowser(csvfile):
     print 'Total # of Safari browser Used : {} that is {}% of total usage.'.format(safaricount, safariper)
     print 'Total # of Chrome browser Used : {} that is {}% of total usage.'.format(chromecount, chromeper)
     print 'Total # of Microsoft Internet Explorer browser Used : {} that is {}% of total usage.'.format(iecount, ieper)    
-    
+ 
+#Extra credit
  def processHitsHourly(csvfile):
-    
      reader = csv.reader(StringIO(csvfile))
      hour_one = 0
      hour_two = 0
@@ -117,7 +114,6 @@ int(hour_one)+int(hour_two)+int(hour_three)+int(hour_four)+int(hour_five)+int(ho
     print 'All together , it has {} hits'.format(totalhit)            
             
 def main():
-
     if args.url:
         try:
             urlparse = getURL(args.url)
