@@ -76,16 +76,16 @@ def processBrowser(csvfile):
     print 'Total # of Microsoft Internet Explorer browser Used : {} that is {}% of total usage.'.format(iecount, ieper)    
  
 #Extra credit
- def processHitsHourly(csvfile):
-     reader = csv.reader(StringIO(csvfile))
-     hour_one = 0
-     hour_two = 0
-     hour_three = 0
-     hour_four = 0
-     hour_five = 0
-     hour_six = 0
-     totalcount = 0
-     REI = re.IGNORECASE
+def processHitsHourly(csvfile):
+    reader = csv.reader(StringIO(csvfile))
+    hour_one = 0
+    hour_two = 0
+    hour_three = 0
+    hour_four = 0
+    hour_five = 0
+    hour_six = 0
+    totalcount = 0
+    REI = re.IGNORECASE
 
      for hhits in reader:
          totalcount += 1
